@@ -86,6 +86,46 @@ function arePasswordsMatching(password, repeatPassword) {
   return password === repeatPassword;
 }
 
+/**
+ * @param {String} username
+ * @param {String} password
+ */
+function areValidLoginCredentials(username, password) {
+  const errors = [];
+  if (!username || !isValidUsername(username)) {
+    errors.push("Invalid username.");
+  }
+  if (!password || !isValidPassword(password)) {
+    errors.push("Invalid password.");
+  }
+  return errors;
+}
+
+function areValidRegisterCredentials(
+  username,
+  password,
+  repeatPassword,
+  email
+) {
+  const errors = [];
+  if (!username || !isValidUsername(username)) {
+    errors.push("Invalid username.");
+  }
+  if (!password || !isValidPassword(password)) {
+    errors.push("Invalid password.");
+  }
+  if (!repeatPassword || !isValidPassword(repeatPassword)) {
+    errors.push("Invalid repeat password.");
+  }
+  if (!arePasswordsMatching(password, repeatPassword)) {
+    errors.push("The password and repeat password do not match.");
+  }
+  if (!email || !isValidEmail(email)) {
+    errors.push("Invalid email.");
+  }
+  return errors;
+}
+
 module.exports = {
   usernameExists,
   emailExists,
@@ -94,4 +134,6 @@ module.exports = {
   isValidImageURL,
   isValidPassword,
   arePasswordsMatching,
+  areValidLoginCredentials,
+  areValidRegisterCredentials,
 };
