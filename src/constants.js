@@ -1,2 +1,10 @@
 exports.PORT = 3000;
 exports.DB_NAME = "angular-softuni-exam";
+exports.BCRYPT_SALT_ROUNDS = 10;
+exports.JWT_SECRET = "secret";
+exports.USERNAME_MIN_LENGTH = 3;
+exports.USERNAME_MAX_LENGTH = 22;
+exports.PASSWORD_MIN_LENGTH = 3;
+exports.PASSWORD_MAX_LENGTH = 22;
+exports.EMAIL_MIN_LENGTH = 6;
+exports.EMAIL_MAX_LENGTH = 256;
