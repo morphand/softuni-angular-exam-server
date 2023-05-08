@@ -3,10 +3,10 @@ const User = require("../models/User");
 
 /**
  * Checks if a user exists in the database.
- * @param {String} userId
+ * @param {String} username
  */
-async function userExists(userId) {
-  return await User.findById(userId);
+async function userExists(username) {
+  return Boolean(await User.findOne({ username: username }));
 }
 
 /**
@@ -22,13 +22,18 @@ async function getOne(userId) {
  * @param {String} username
  */
 async function getOneByUsername(username) {
-  return await User.find({ username: username }).lean();
+  return await User.findOne({ username: username }).lean();
+}
+
+async function emailExists(email) {
+  return Boolean(await User.findOne({ email: email }).lean());
 }
 
 const userService = {
   getOne,
   getOneByUsername,
   userExists,
+  emailExists,
 };
 
 module.exports = userService;
