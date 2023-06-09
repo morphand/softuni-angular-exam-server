@@ -15,13 +15,12 @@ const constants = require("../constants");
  * @param {String} email
  * @param {String} password
  */
-async function register(username, email, imageURL, password) {
+async function register(username, email, password) {
   try {
     // Save the created user
     const user = new User({
       username,
       email,
-      imageURL,
       password: await bcrypt.hash(password, constants.BCRYPT_SALT_ROUNDS),
     });
     const userResult = await user.save();
@@ -33,9 +32,22 @@ async function register(username, email, imageURL, password) {
   }
 }
 
-async function login(username, password) {
+/**
+ * @param {String} username
+ * @param {String} password
+ * @param {object|null} cachedCredentials Object containing username and password properties with string values.
+ */
+async function login(username, password, cachedCredentials = null) {
   try {
-    const userResult = await User.findOne({ username });
+    let userResult;
+
+    // If a cache is provided, use it instead of the database.
+    if (cachedCredentials) {
+      userResult = cachedCredentials;
+    } else {
+      userResult = await User.findOne({ username });
+    }
+
     const isCorrectPassword = await bcrypt.compare(
       password,
       userResult.password
@@ -43,6 +55,7 @@ async function login(username, password) {
     if (!isCorrectPassword) {
       throw new Error("The password is not correct.");
     }
+
     // Create token
     const token = await createToken(
       userResult._id,
