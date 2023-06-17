@@ -24,10 +24,6 @@ const UserSchema = mongoose.Schema({
     type: Boolean,
     default: false,
   },
-  imageURL: {
-    type: String,
-    default: "",
-  },
   password: {
     type: String,
     required: true,
@@ -35,6 +31,13 @@ const UserSchema = mongoose.Schema({
   registeredAt: {
     type: Date,
     default: Date.now(),
+  },
+  stats: {
+    turnsAvailable: {
+      type: Number,
+      required: true,
+      default: 0,
+    },
   },
 });
 
