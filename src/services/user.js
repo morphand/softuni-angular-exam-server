@@ -45,15 +45,12 @@ async function emailExists(email) {
   return Boolean(await User.findOne({ email: email }).lean());
 }
 
-async function getUserStats(userId) {
-  const user = await getOne(userId);
-  return user.stats;
-}
-
-async function updateUserTurnsAvailable(userId, turnsAvailable) {
-  return await User.findByIdAndUpdate(userId, {
-    stats: { turnsAvailable },
-  });
+/**
+ * @param {String} userId
+ */
+async function getUserRentedCars(userId) {
+  const user = await User.findById(userId).populate('rentedCars').lean();
+  return user.rentedCars;
 }
 
 const userService = {
@@ -61,8 +58,7 @@ const userService = {
   getOneByUsername,
   userExists,
   emailExists,
-  getUserStats,
-  updateUserTurnsAvailable,
+  getUserRentedCars,
 };
 
 module.exports = userService;

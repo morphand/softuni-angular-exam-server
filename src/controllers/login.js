@@ -12,6 +12,7 @@ const validators = require("../utils/validators");
  */
 function login(authCache) {
   return async (req, res) => {
+    console.log(req.body, req.headers.authentication);
     const username = req.body.username;
     const password = req.body.password;
     const result = new Result({
@@ -48,7 +49,7 @@ function login(authCache) {
           cachedCredentials
         );
         result.success = true;
-        result.value = { token };
+        result.value = { token, username };
         result.wasCached = true;
       } catch (e) {
         result.errors.push(e.message);
@@ -61,7 +62,7 @@ function login(authCache) {
     try {
       const token = await authService.login(username, password);
       result.success = true;
-      result.value = { token };
+      result.value = { token, username };
 
       // Cache the response.
       const user = await userService.getOneByUsername(username);

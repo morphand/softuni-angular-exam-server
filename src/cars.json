@@ -1,0 +1,178 @@
+[
+  {
+    "model": "4Runner",
+    "generation": "5 (N280)",
+    "madeIn": 2010,
+    "class": "Mid-size SUV",
+    "doors": 5,
+    "powertrain": {
+      "fuel": "Petrol",
+      "sizeInL": 4.0,
+      "powerOutputInKw": 236,
+      "powerOutputInHp": 317,
+      "transmissionType": "automatic",
+      "transmissionGears": 5
+    },
+    "dimensions": {
+      "lengthInMm": 4860,
+      "widthInMm": 1925,
+      "heightInMm": 1795,
+      "weightInKg": 2180
+    },
+    "imageURL": "/static/pexels-erik-mclean-17519377.jpg"
+  },
+  {
+    "model": "4Runner",
+    "generation": "5 (N280)",
+    "madeIn": 2009,
+    "class": "Mid-size SUV",
+    "doors": 5,
+    "powertrain": {
+      "fuel": "Petrol",
+      "sizeInL": 2.7,
+      "powerOutputInKw": 120,
+      "powerOutputInHp": 161,
+      "transmissionType": "automatic",
+      "transmissionGears": 4
+    },
+    "dimensions": {
+      "lengthInMm": 4860,
+      "widthInMm": 1925,
+      "heightInMm": 1795,
+      "weightInKg": 2180
+    },
+    "imageURL": "/static/pexels-erik-mclean-17519377.jpg"
+  },
+  {
+    "model": "Land Cruiser",
+    "generation": "8 (J300)",
+    "madeIn": 2022,
+    "class": "Full-size SUV",
+    "doors": 5,
+    "powertrain": {
+      "fuel": "Petrol",
+      "sizeInL": 4.0,
+      "powerOutputInKw": 201,
+      "powerOutputInHp": 270,
+      "transmissionType": "automatic",
+      "transmissionGears": 6
+    },
+    "dimensions": {
+      "lengthInMm": 5015,
+      "widthInMm": 1990,
+      "heightInMm": 1945,
+      "weightInKg": 2645
+    },
+    "imageURL": "/static/pexels-isaac-mitchell-13662314.jpg"
+  },
+  {
+    "model": "Land Cruiser",
+    "generation": "8 (J300)",
+    "madeIn": 2022,
+    "class": "Full-size SUV",
+    "doors": 5,
+    "powertrain": {
+      "fuel": "Diesel",
+      "sizeInL": 3.3,
+      "powerOutputInKw": 227,
+      "powerOutputInHp": 304,
+      "transmissionType": "automatic",
+      "transmissionGears": 10
+    },
+    "dimensions": {
+      "lengthInMm": 5015,
+      "widthInMm": 1990,
+      "heightInMm": 1945,
+      "weightInKg": 2645
+    },
+    "imageURL": "/static/pexels-isaac-mitchell-13662314.jpg"
+  },
+  {
+    "model": "Yaris",
+    "generation": "4 (XP210)",
+    "madeIn": 2022,
+    "class": "Supermini",
+    "doors": 5,
+    "powertrain": {
+      "fuel": "Petrol/Hybrid",
+      "sizeInL": 1.5,
+      "powerOutputInKw": 67,
+      "powerOutputInHp": 90,
+      "transmissionType": "automatic",
+      "transmissionGears": 1
+    },
+    "dimensions": {
+      "lengthInMm": 3940,
+      "widthInMm": 1745,
+      "heightInMm": 1500,
+      "weightInKg": 1180
+    },
+    "imageURL": "/static/pexels-txomcs-13609595.jpg"
+  },
+  {
+    "model": "Yaris",
+    "generation": "4 (XP210)",
+    "madeIn": 2022,
+    "class": "Supermini",
+    "doors": 5,
+    "powertrain": {
+      "fuel": "Petrol",
+      "sizeInL": 1.5,
+      "powerOutputInKw": 92,
+      "powerOutputInHp": 123,
+      "transmissionType": "manual",
+      "transmissionGears": 6
+    },
+    "dimensions": {
+      "lengthInMm": 3940,
+      "widthInMm": 1745,
+      "heightInMm": 1500,
+      "weightInKg": 1180
+    },
+    "imageURL": "/static/pexels-txomcs-13609595.jpg"
+  },
+  {
+    "model": "GR Supra",
+    "generation": "5 (J29/DB)",
+    "madeIn": 2022,
+    "class": "Sports car",
+    "doors": 3,
+    "powertrain": {
+      "fuel": "Petrol",
+      "sizeInL": 3.0,
+      "powerOutputInKw": 285,
+      "powerOutputInHp": 382,
+      "transmissionType": "manual",
+      "transmissionGears": 6
+    },
+    "dimensions": {
+      "lengthInMm": 4380,
+      "widthInMm": 1865,
+      "heightInMm": 1295,
+      "weightInKg": 1520
+    },
+    "imageURL": "/static/pexels-erik-mclean-17507723.jpg"
+  },
+  {
+    "model": "GR Supra",
+    "generation": "5 (J29/DB)",
+    "madeIn": 2022,
+    "class": "Sports car",
+    "doors": 3,
+    "powertrain": {
+      "fuel": "Petrol",
+      "sizeInL": 3.0,
+      "powerOutputInKw": 250,
+      "powerOutputInHp": 335,
+      "transmissionType": "automatic",
+      "transmissionGears": 8
+    },
+    "dimensions": {
+      "lengthInMm": 4380,
+      "widthInMm": 1865,
+      "heightInMm": 1295,
+      "weightInKg": 1520
+    },
+    "imageURL": "/static/pexels-erik-mclean-17507723.jpg"
+  }
+]

@@ -32,13 +32,12 @@ const UserSchema = mongoose.Schema({
     type: Date,
     default: Date.now(),
   },
-  stats: {
-    turnsAvailable: {
-      type: Number,
-      required: true,
-      default: 0,
+  rentedCars: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Car",
     },
-  },
+  ],
 });
 
 const UserModel = mongoose.model("User", UserSchema);
